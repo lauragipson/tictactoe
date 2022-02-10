@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ActSettings"
+    android:background="@color/black"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        >
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Color Settings Section -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <TextView
+            android:id="@+id/colSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Color Settings"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Background Color -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            >
+
+            <TextView
+                android:id="@+id/bgText"
+                android:layout_width="140dp"
+                android:layout_height="36dp"
+                android:layout_margin="4dp"
+                android:textColor="@color/white"
+                android:text="Background: "
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <SeekBar
+                android:id="@+id/bgSeekBar"
+                android:layout_width="180dp"
+                android:layout_height="36dp"
+                android:layout_margin="4dp"
+                android:progress="1"
+                android:max="100"
+                />
+
+            <TextView
+                android:id="@+id/bgSampleColor"
+                android:layout_width="60dp"
+                android:layout_height="36dp"
+                android:layout_margin="4dp"
+                android:padding="2dp"
+                android:background="@color/white"
+                />
+
+        </LinearLayout>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Tile Color -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            >
+
+            <TextView
+                android:id="@+id/tileText"
+                android:layout_width="140dp"
+                android:layout_height="36dp"
+                android:layout_margin="4dp"
+                android:textColor="@color/white"
+                android:text="Tile: "
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <SeekBar
+                android:id="@+id/tileSeekBar"
+                android:layout_width="180dp"
+                android:layout_height="36dp"
+                android:layout_margin="4dp"
+                android:progress="1"
+                android:max="100"
+                />
+
+            <TextView
+                android:id="@+id/tileSampleColor"
+                android:layout_width="60dp"
+                android:layout_height="36dp"
+                android:layout_margin="4dp"
+                android:padding="2dp"
+                android:background="@color/white"
+                />
+
+        </LinearLayout>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Image Settings -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <TextView
+            android:id="@+id/imgSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Image Settings"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            />
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Headers -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            >
+
+            <TextView
+                android:id="@+id/blankLabel"
+                android:layout_width="133dp"
+                android:layout_height="28dp"
+                android:layout_margin="4dp"
+            />
+
+            <TextView
+                android:id="@+id/humLabel"
+                android:layout_width="133dp"
+                android:layout_height="28dp"
+                android:layout_margin="4dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text="Human"
+                android:textStyle="bold"
+                android:gravity="center"
+            />
+
+            <TextView
+                android:id="@+id/compLabel"
+                android:layout_width="133dp"
+                android:layout_height="28dp"
+                android:layout_margin="4dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text="Computer"
+                android:textStyle="bold"
+                android:gravity="center"
+            />
+
+        </LinearLayout>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Image Selection Radio Buttons -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:gravity="center"
+        >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="133dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingBottom="1dp"
+            >
+
+                <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                >
+
+                    <RadioButton
+                        android:id="@+id/imgs1"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="20dp"
+                        android:onClick="onRadioButtonClicked" />
+
+                    <RadioButton
+                        android:id="@+id/imgs2"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="20dp"
+                        android:onClick="onRadioButtonClicked" />
+
+                    <RadioButton
+                        android:id="@+id/imgs3"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="20dp"
+                        android:onClick="onRadioButtonClicked" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/imgGroup1"
+                android:orientation="vertical"
+                android:layout_width="133dp"
+                android:layout_height="300dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:paddingBottom="1dp"
+            >
+
+                <ImageView
+                    android:id="@+id/humImg1"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/neonx"
+                    android:scaleType="centerInside"
+                    />
+
+                <ImageView
+                    android:id="@+id/humImg2"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/hearteyes"
+                    android:scaleType="centerInside"
+                />
+
+                <ImageView
+                    android:id="@+id/humImg3"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/baby_yoda"
+                    android:scaleType="centerInside"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/imgGroup2"
+            android:orientation="vertical"
+            android:layout_width="133dp"
+            android:layout_height="300dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:paddingBottom="1dp"
+            >
+
+                <ImageView
+                    android:id="@+id/comImg1"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/neono"
+                    android:scaleType="centerInside"
+                    />
+
+                <ImageView
+                    android:id="@+id/comImg2"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/dizzy"
+                    android:scaleType="centerInside"
+                    />
+
+                <ImageView
+                    android:id="@+id/comImg3"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/baby_nut"
+                    android:scaleType="centerInside"
+                    />
+        </LinearLayout>
+
+    </LinearLayout>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Stat Resets Section -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <TextView
+            android:id="@+id/statsHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stat Resets"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            />
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Stat Resets -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/statsText"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_margin="4dp"
+                android:textColor="@color/white"
+                android:text="Stat Resets: "
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/statsVal"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_margin="4dp"
+                android:padding="2dp"
+                android:background="@color/white"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
